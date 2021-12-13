@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>dotnet_ts_testing</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DiffPlex" Version="1.7.0" />
+        <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore" Version="3.12.6" />
+        <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.linux-x64" Version="3.12.6" />
+        <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.osx-x64" Version="3.12.6" />
+        <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x64" Version="3.12.6" />
+        <PackageReference Include="Jint" Version="3.0.0-beta-2037" />
+        <PackageReference Include="Jurassic" Version="3.2.4" />
+        <PackageReference Include="Microsoft.ClearScript" Version="7.2.0" />
+        <PackageReference Include="Microsoft.ClearScript.osx-x64" Version="7.2.0" />
+        <PackageReference Include="Microsoft.ClearScript.linux-x64" Version="7.2.0" />
+        <PackageReference Include="NiL.JS" Version="2.5.1552" />
+    </ItemGroup>
+
+    <ItemGroup>
+
+        <None Update="scripts/*.js;tests/*.*" CopyToOutputDirectory="PreserveNewest" />
+
+        <None Update="**/*.dll" Visible="false" />
+
+        <None Update="node_modules/typescript/lib/typescript.js" Link="scripts/typescript.js" CopyToOutputDirectory="PreserveNewest">
+        </None>
+
+    </ItemGroup>
+
+
+
+</Project>
